@@ -55,7 +55,7 @@ class MultiversoPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'CUANTO DE ENERGÍA',
+              'MULTIVERSO',
               style: GoogleFonts.orbitron(
                 fontSize: 24,
                 color: Color.fromARGB(255, 196, 157, 255),
