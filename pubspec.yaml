@@ -74,6 +74,12 @@ flutter:
     - assets/perfil.png
     - assets/multiverso.png
     - assets/desencriptacion.png
+    - assets/gato1.png
+    - assets/caja.png
+    - assets/portal.png
+    - assets/multiverso_1.png
+    - assets/multiverso_2.png
+
 
 
   # To add assets to your application, add an assets section, like this:

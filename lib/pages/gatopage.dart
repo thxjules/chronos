@@ -1,9 +1,35 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:chronos/components/custom_buttom_bar.dart';
 
-class Gatopage extends StatelessWidget {
+class Gatopage extends StatefulWidget {
   const Gatopage({super.key});
+
+  @override
+  State<Gatopage> createState() => _GatopageState();
+}
+
+class _GatopageState extends State<Gatopage> {
+  String? estadoGato;
+  String? imagenGato;
+
+  void observarGato() {
+    final random = Random();
+    final resultado = random.nextBool();
+
+    setState(() {
+      estadoGato = resultado ? '¡El gato está vivo!' : 'Oh no... el gato está muerto.';
+      imagenGato = resultado ? 'assets/gato1.png' : 'assets/gato1.png';
+    });
+  }
+
+  void reiniciar() {
+    setState(() {
+      estadoGato = null;
+      imagenGato = null;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +81,7 @@ class Gatopage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'PARADOJA DEL GATO DE SCHöDINGER',
+              'PARADOJA DEL GATO DE SCHRÖDINGER',
               style: GoogleFonts.orbitron(
                 fontSize: 24,
                 color: Color(0xFF9DCBFF),
@@ -69,19 +95,46 @@ class Gatopage extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: SizedBox(
-                height: 250,
-                child: Image.asset(
-                  'assets/gato.png',
-                  fit: BoxFit.contain,
-                ),
+            const SizedBox(height: 20),
+            if (estadoGato == null)
+              Column(
+                children: [
+                  Text(
+                    'Haz clic para abrir la caja y observar el estado del gato.',
+                    style: GoogleFonts.poppins(color: Colors.white70, fontSize: 16),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20),
+                  GestureDetector(
+                    onTap: observarGato,
+                    child: Image.asset('assets/caja.png', height: 200),
+                  ),
+                ],
+              )
+            else
+              Column(
+                children: [
+                  Image.asset(imagenGato ?? 'assets/gato.png', height: 250),
+                  const SizedBox(height: 20),
+                  Text(
+                    estadoGato ?? '',
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: reiniciar,
+                    child: Text('Reiniciar'),
+                  ),
+                ],
               ),
-            ),
             const SizedBox(height: 20),
             Text(
-              'La paradoja del gato de Schrödinger es un experimento mental que plantea que un gato dentro de una caja puede estar simultáneamente vivo y muerto hasta que se observe. Es una forma de ilustrar cómo la superposición cuántica desafía nuestra intuición clásica.',
+              'La paradoja del gato de Schrödinger muestra cómo la superposición cuántica desafía la lógica clásica. Hasta que se observe, el gato puede estar simultáneamente vivo y muerto.',
               style: GoogleFonts.poppins(color: Colors.white, fontSize: 16),
               textAlign: TextAlign.justify,
             ),

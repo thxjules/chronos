@@ -1,10 +1,8 @@
 import 'package:chronos/pages/colapso.dart';
-import 'package:chronos/pages/materia.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:chronos/components/custom_buttom_bar.dart';
 import 'package:chronos/pages/gatopage.dart';
-import 'package:chronos/pages/energia.dart';
 import 'package:chronos/pages/multiverso.dart';
 import 'package:chronos/pages/desencriptacion.dart';
 
@@ -59,15 +57,6 @@ class ConceptosPage extends StatelessWidget {
                     ),
                     _conceptCard(
                       context,
-                      title: 'Cuanto de Energía',
-                      icon: Icons.bolt,
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => const EnergiaPage()),
-                      ),
-                    ),
-                    _conceptCard(
-                      context,
                       title: 'Colapso de Ondas',
                       icon: Icons.waves,
                       onTap: () => Navigator.push(
@@ -75,15 +64,7 @@ class ConceptosPage extends StatelessWidget {
                         MaterialPageRoute(builder: (_) => const Colapso()),
                       ),
                     ),
-                    _conceptCard(
-                      context,
-                      title: 'Materia Oscura',
-                      icon: Icons.dark_mode,
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => const MateriaPage()),
-                      ),
-                    ),
+                   
                     _conceptCard(
                       context,
                       title: ' Multiverso',

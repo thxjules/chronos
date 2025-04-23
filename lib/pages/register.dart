@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:chronos/database_helper.dart'; // Importa el helper de base de datos
+import 'package:chronos/database_helper.dart'; 
 import 'package:chronos/components/text_field.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:chronos/pages/login.dart';  // Asegúrate de importar la página de login
+import 'package:chronos/pages/login.dart';  
 
 class Register extends StatelessWidget {
   Register({super.key});
