@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/gato': (context) => const Gatopage(),
         '/explora': (context) => const Pag2(),
         '/desencriptacion': (context) => const DesencriptacionPage(), 
-        '/perfil': (context) => const PerfilPage(), 
+        '/perfil': (context) => const PerfilPage(),
         '/usuarios_json': (context) => UsuariosJsonScreen(),
             
       },

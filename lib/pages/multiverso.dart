@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:chronos/components/custom_buttom_bar.dart';
 
+
 class MultiversoPage extends StatefulWidget {
   const MultiversoPage({super.key});
 
@@ -49,7 +50,7 @@ class _MultiversoPageState extends State<MultiversoPage> {
       bottomNavigationBar: CustomBottomBar(
         onHomeTap: () => Navigator.pushNamed(context, '/inicio'),
         onAtomTap: () => Navigator.pushNamed(context, '/conceptos'),
-        onStarTap: () {},
+        onStarTap: () => Navigator.pushNamed(context, '/perfil'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),

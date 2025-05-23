@@ -12,7 +12,7 @@ class DesencriptacionPage extends StatelessWidget {
       bottomNavigationBar: CustomBottomBar(
         onHomeTap: () => Navigator.pushNamed(context, '/inicio'),
         onAtomTap: () => Navigator.pushNamed(context, '/conceptos'),
-        onStarTap: () {},
+        onStarTap: () => Navigator.pushNamed(context, '/perfil'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),

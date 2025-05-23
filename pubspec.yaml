@@ -33,7 +33,8 @@ dependencies:
   sqflite: ^2.0.0+4        # Motor SQLite para la base de datos
   path_provider: ^2.0.10   # Para gestionar rutas de acceso a documentos
   path: ^1.8.2             # Utilidades para manipular rutas
-  google_fonts: ^6.1.0     # Fuentes de Google (si las quieres seguir usando)
+  google_fonts: ^6.1.0    # Fuentes de Google 
+  url_launcher: ^6.1.10   
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
